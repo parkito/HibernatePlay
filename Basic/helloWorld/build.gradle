@@ -4,12 +4,16 @@ version '1.0'
 apply plugin: 'java'
 apply plugin: 'idea'
 
-buildscript {
-    repositories {
-        jcenter()
-    }
+sourceCompatibility = 1.8
 
-    dependencies {
-        classpath "org.hibernate:hibernate-core:5.3.7.Final"
-    }
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "org.hibernate:hibernate-entitymanager:5.3.7.Final"
+    compile "org.postgresql:postgresql:42.2.5"
+    compile "ch.qos.logback:logback-core:1.2.3"
+    compile "org.slf4j:slf4j-api:1.7.25"
+    compile "ch.qos.logback:logback-classic:1.2.3"
 }
